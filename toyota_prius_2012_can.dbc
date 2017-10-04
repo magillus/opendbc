@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: XXX DSU HCU EPS IPAS 0
+BU_: XXX DSU HCU EPS IPAS 0 
 
 
 BO_ 36 KINEMATICS: 8 XXX
@@ -178,19 +178,11 @@ BO_ 1552 NEW_MSG_4: 8 XXX
  SG_ NEW_SIGNAL_2 : 0|7@1+ (1,0) [0|15] "" XXX
 
 BO_ 452 ENGINE_GAS: 8 XXX
- SG_ RPM? : 7|16@0- (1,0) [0|65535] "" XXX
  SG_ _CHECKSUM : 63|8@0- (1,0) [0|255] "" XXX
-
-BO_ 583 _HYBRID2?: 8 XXX
- SG_ _CHARGE_LEVEL? : 15|16@0- (1,0) [0|255] "" XXX
- SG_ _CHARGE STATE : 0|4@1+ (1,0) [0|7] "" XXX
+ SG_ RPM : 7|16@0+ (1,0) [0|65535] "" XXX
 
 BO_ 800 _SPEED_STEERING_RELATED: 8 XXX
- SG_ S : NaN|NaN@0+ (6,3) [NaN|8] "," 0
-
-BO_ 548 _HYBIRD?: 8 XXX
- SG_ HYBRID ON : 5|1@0+ (1,0) [0|1] "" XXX
- SG_ _BATTERY PWER? : 40|8@1- (1,0) [0|255] "" XXX
+ SG_ H : NaN|NaN@0+ (NaN,5) [NaN|1] "," 0
 
 
 
