@@ -178,14 +178,17 @@ BO_ 1552 NEW_MSG_4: 8 XXX
  SG_ NEW_SIGNAL_2 : 0|7@1+ (1,0) [0|15] "" XXX
 
 BO_ 452 NEW_MSG_6: 8 XXX
- SG_ S : NaN|NaN@0+ (7,NaN) [1|6] "," 0
  SG_ NEW_SIGNAL_1 : 63|8@0- (1,0) [0|255] "" XXX
 
 BO_ 583 NEW_MSG_5: 8 XXX
  SG_ NEW_SIGNAL_1 : 15|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 800 _SPEED_STEERING_RELATED: 8 XXX
- SG_ SPEED RELATED : 63|8@0+ (1,0) [0|255] "" XXX
+ SG_ S : NaN|NaN@0+ (6,3) [NaN|8] "," 0
+
+BO_ 548 _HYBIRD?: 8 XXX
+ SG_ HYBRID ON : 5|1@0+ (1,0) [0|1] "" XXX
+ SG_ NEW_SIGNAL_1 : 40|8@1- (1,0) [0|255] "" XXX
 
 
 
