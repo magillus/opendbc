@@ -79,8 +79,8 @@ BO_ 560 BRAKE_MODULE2: 8 XXX
  SG_ MILEAGE_COUNTER : 7|16@0+ (0.01,0) [0|655.35] "m" XXX
 
 BO_ 581 GAS_PEDAL: 8 XXX
- SG_ GAS_PEDAL : 23|8@0+ (0.005,0) [0|1] "" XXX
- SG_ NEW_SIGNAL_1 : 31|4@0+ (1,0) [0|255] "" XXX
+ SG_ GAS_PEDAL_STATE : 31|4@0+ (1,0) [0|255] "" XXX
+ SG_ GAS_PEDAL2 : 39|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 608 STEER_TORQUE_SENSOR: 8 XXX
  SG_ STEER_TORQUE_EPS : 47|16@0- (0.5,0) [0|65535] "" XXX
@@ -211,7 +211,6 @@ CM_ SG_ 550 BRAKE_PRESSURE "seems prop to pedal force";
 CM_ SG_ 550 BRAKE_POSITION "seems proportional to pedal displacement, unclear the max value of 0x1c8";
 CM_ SG_ 560 BRAKE_LIGHTS "double check";
 CM_ SG_ 560 MILEAGE_COUNTER "";
-CM_ SG_ 581 GAS_PEDAL "it seems slightly filtered";
 CM_ SG_ 608 STEER_TORQUE_EPS "0.5 factor to be comparable with STEER_TORQUE_CMD";
 CM_ SG_ 608 STEER_TORQUE_DRIVER "driver torque";
 CM_ SG_ 608 STEER_OVERRIDE "set when driver torque exceeds a certain value";
