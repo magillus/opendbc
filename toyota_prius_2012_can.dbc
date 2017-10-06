@@ -120,9 +120,9 @@ BO_ 1556 STEERING_LEVERS: 8 XXX
  SG_ TURN_SIGNALS : 29|2@0+ (1,0) [0|3] "" XXX
 
 BO_ 37 STEER_ANGLE_SENSOR: 8 XXX
- SG_ STEER_ANGLE : 3|12@0- (1.5,0) [-500|500] "deg" XXX
  SG_ STEER_FRACTION : 39|4@0- (0.1,0) [-0.7|0.7] "deg" XXX
  SG_ STEER_RATE : 35|12@0- (1,0) [-2000|2000] "deg/s" XXX
+ SG_ STEER_ANGLE : 3|12@0- (1.5,0) [-500|500] "deg" XXX
 
 BO_ 467 PCM_CRUISE_2: 8 XXX
  SG_ MAIN_ON : 15|1@0+ (1,0) [0|1] "" XXX
@@ -207,6 +207,22 @@ BO_ 947 ELECTRIC_MOTOR: 8 XXX
 BO_ 979 _ACC_SPEED: 8 XXX
  SG_ SPEED_RELATED : 7|16@0+ (1,0) [0|65535] "" XXX
 
+BO_ 1177 NEW_MSG_5: 8 XXX
+ SG_ NEW_SIGNAL_1 : 23|16@0- (1,0) [0|65535] "" XXX
+ SG_ _GAS_PEDALACCCEL : 0|16@1- (1,0) [0|255] "" XXX
+
+BO_ 1184 WHEEL_SPEED_500MS: 8 XXX
+ SG_ WHEEL_SPEED_2 : 47|8@0+ (1,0) [0|255] "" XXX
+ SG_ WHEEL_SPEED_3 : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ WHEEL_SPEED_1 : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ WHEEL_SPEED_4 : 31|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 1179 _THROTTLE: 8 XXX
+ SG_ POSITION_THROTTLE : 7|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 1574 NEW_MSG_6: 8 XXX
+ SG_ STATE_DOORs : 21|2@0+ (1,0) [0|3] "" XXX
+
 
 
 
@@ -225,6 +241,7 @@ CM_ SG_ 37 STEER_FRACTION "1/15th of the signal STEER_ANGLE, which is 1.5 deg; n
 CM_ SG_ 37 STEER_RATE "factor is tbd";
 CM_ SG_ 467 SET_SPEED "43 kph are shown as 28mph, so conversion isnt perfect";
 CM_ SG_ 1042 SET_ME_1 "unclear what this is, nut it's always 1 in drive traces";
+CM_ SG_ 1574 STATE_DOORs "from other DBC-not tested";
 VAL_ 295 GEAR 0 "P" 1 "R" 2 "N" 3 "D" 4 "B" ;
 VAL_ 466 CRUISE_STATE 8 "active" 7 "standstill" 1 "off" ;
 VAL_ 610 STATE 5 "override" 3 "enabled" 1 "disabled" ;
