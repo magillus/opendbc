@@ -74,13 +74,15 @@ BO_ 552 ACCELEROMETER: 8 XXX
  SG_ ACCEL_Z : 22|15@0- (1,0) [0|32767] "" XXX
  SG_ ACCEL_X : 6|15@0- (0.001,0) [-20|20] "m/s2" XXX
 
-BO_ 560 BRAKE_MODULE2: 8 XXX
- SG_ BRAKE_LIGHTS : 26|1@0+ (1,0) [0|1] "" XXX
+BO_ 560 BRAKE_SENSOR: 7 XXX
  SG_ MILEAGE_COUNTER : 7|16@0+ (0.01,0) [0|655.35] "m" XXX
+ SG_ BRAKE_ENGAGED : 26|1@0+ (1,0) [0|1] "" XXX
+ SG_ BREAK_LOCK_ENGAGED : 27|1@1+ (1,0) [0|3] "" XXX
 
-BO_ 581 GAS_PEDAL: 8 XXX
+BO_ 581 ACCELERATION_PEDAL: 8 XXX
  SG_ GAS_PEDAL_STATE : 31|4@0+ (1,0) [0|255] "" XXX
- SG_ GAS_PEDAL2 : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ SPEED : 15|16@0+ (1,0) [0|65535] "" XXX
+ SG_ ACCELERATION_PEDAL_POSITION : 39|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 608 STEER_TORQUE_SENSOR: 8 XXX
  SG_ STEER_TORQUE_EPS : 47|16@0- (0.5,0) [0|65535] "" XXX
@@ -192,8 +194,10 @@ BO_ 182 SPEED2: 4 XXX
  SG_ CHECKSUM : 24|8@1- (1,0) [0|65535] "" XXX
  SG_ SPEED : 7|16@0+ (0.01,0) [0|65535] "kph" XXX
 
-BO_ 583 ELECTRIC_MOTOR: 8 XXX
- SG_ ELE_MOTOR_POWER : 15|16@0- (1,0) [0|65535] "" XXX
+BO_ 583 HYBRID_SYSTEM_INDICATOR: 5 XXX
+ SG_ HYBRID_IN_OUT_POWER : 15|8@0- (1,0) [0|65535] "" XXX
+ SG_ HYBRID_STATE : 0|4@1+ (1,0) [0|7] "" XXX
+ SG_ HYBRID_STATE2 : 23|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1176 _SPEED_ELE_POWER: 8 XXX
  SG_ SPEED_LIKE : 43|4@0+ (1,0) [0|255] "" XXX
@@ -234,8 +238,8 @@ CM_ SG_ 36 YAW_RATE "verify";
 CM_ SG_ 36 STEERING_TORQUE "does not seem the steer torque, tbd";
 CM_ SG_ 550 BRAKE_PRESSURE "seems prop to pedal force";
 CM_ SG_ 550 BRAKE_POSITION "seems proportional to pedal displacement, unclear the max value of 0x1c8";
-CM_ SG_ 560 BRAKE_LIGHTS "double check";
 CM_ SG_ 560 MILEAGE_COUNTER "";
+CM_ SG_ 560 BRAKE_ENGAGED "double check";
 CM_ SG_ 608 STEER_TORQUE_EPS "0.5 factor to be comparable with STEER_TORQUE_CMD";
 CM_ SG_ 608 STEER_TORQUE_DRIVER "driver torque";
 CM_ SG_ 608 STEER_OVERRIDE "set when driver torque exceeds a certain value";
