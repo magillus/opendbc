@@ -225,15 +225,13 @@ BO_ 1179 _THROTTLE: 8 XXX
  SG_ POSITION_THROTTLE : 7|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1574 NEW_MSG_6: 8 XXX
- SG_ STATE_DOORs : 21|2@0+ (1,0) [0|3] "" XXX
+ SG_ STATE_DOORS : 21|2@0+ (1,0) [0|3] "" XXX
 
 BO_ 32 NEW_MSG_7: 8 XXX
  SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_1 : 55|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 950 NEW_MSG_8: 8 XXX
-
-BO_ 956 SELECTED GEAR DISPLAY: 8 XXX
  SG_ STATE : 8|8@1+ (1,0) [0|255] "" XXX
  SG_ DRIVE_STATE : 47|8@0+ (1,0) [0|255] "" XXX
 
@@ -249,7 +247,6 @@ CM_ SG_ 36 YAW_RATE "verify";
 CM_ SG_ 36 STEERING_TORQUE "does not seem the steer torque, tbd";
 CM_ SG_ 550 BRAKE_PRESSURE "seems prop to pedal force";
 CM_ SG_ 550 BRAKE_POSITION "seems proportional to pedal displacement, unclear the max value of 0x1c8";
-CM_ SG_ 560 MILEAGE_COUNTER "";
 CM_ SG_ 560 BRAKE_ENGAGED "double check";
 CM_ SG_ 608 STEER_TORQUE_EPS "0.5 factor to be comparable with STEER_TORQUE_CMD";
 CM_ SG_ 608 STEER_TORQUE_DRIVER "driver torque";
@@ -260,8 +257,7 @@ CM_ SG_ 37 STEER_RATE "factor is tbd";
 CM_ SG_ 37 STEER_FRACTION "1/15th of the signal STEER_ANGLE, which is 1.5 deg; note that 0x8 is never set";
 CM_ SG_ 467 SET_SPEED "43 kph are shown as 28mph, so conversion isnt perfect";
 CM_ SG_ 1042 SET_ME_1 "unclear what this is, nut it's always 1 in drive traces";
-CM_ SG_ 1574 STATE_DOORs "from other DBC-not tested";
-CM_ SG_ 956 DRIVE_STATE "0x80 drive; 0x02 engine brake";
+CM_ SG_ 1574 STATE_DOORS "from other DBC - not tested";
 VAL_ 295 GEAR 0 "P" 1 "R" 2 "N" 3 "D" 4 "B" ;
 VAL_ 466 CRUISE_STATE 8 "active" 7 "standstill" 1 "off" ;
 VAL_ 610 STATE 5 "override" 3 "enabled" 1 "disabled" ;
