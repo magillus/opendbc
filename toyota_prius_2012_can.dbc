@@ -75,6 +75,7 @@ BO_ 552 ACCELEROMETER: 8 XXX
  SG_ ACCEL_X : 6|15@0- (0.001,0) [-20|20] "m/s2" XXX
 
 BO_ 560 BRAKE_MODULE2: 8 XXX
+ SG_ MILEAGE_COUNTER : 7|16@0+ (0.01,0) [0|65535] "m" XXX
  SG_ BRAKE_LIGHTS : 26|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 581 GAS_PEDAL: 8 XXX
@@ -184,8 +185,8 @@ BO_ 452 ENGINE_GAS: 8 XXX
 BO_ 800 _SPEED_STEERING_RELATED: 8 XXX
 
 BO_ 548 _BATTERY_USE: 8 XXX
- SG_ ELECTRIC ON : 5|1@0+ (1,0) [0|3] "" XXX
- SG_ BATTERY OUTPUT : 47|8@0+ (1,0) [0|255] "" 1
+ SG_ E : NaN|NaN@0+ (NaN,NaN) [NaN|5] "," 1
+ SG_ B : NaN|NaN@0+ (NaN,NaN) [4|7] "," 8
 
 BO_ 182 SPEED2: 4 XXX
  SG_ CHECKSUM : 24|8@1- (1,0) [0|65535] "" XXX
@@ -202,6 +203,7 @@ CM_ SG_ 36 YAW_RATE "verify";
 CM_ SG_ 36 STEERING_TORQUE "does not seem the steer torque, tbd";
 CM_ SG_ 550 BRAKE_PRESSURE "seems prop to pedal force";
 CM_ SG_ 550 BRAKE_POSITION "seems proportional to pedal displacement, unclear the max value of 0x1c8";
+CM_ SG_ 560 MILEAGE_COUNTER "";
 CM_ SG_ 560 BRAKE_LIGHTS "double check";
 CM_ SG_ 581 GAS_PEDAL "it seems slightly filtered";
 CM_ SG_ 608 STEER_TORQUE_EPS "0.5 factor to be comparable with STEER_TORQUE_CMD";
