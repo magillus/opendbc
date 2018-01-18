@@ -39,10 +39,10 @@ BU_: XXX
 BO_ 1376 NEW_MSG_1: 8 XXX
 
 BO_ 374 GAS_ENGINE: 8 XXX
- SG_ GAS_pedal : 19|12@0+ (1,0) [0|1023] "" XXX
  SG_ COUNTER : 51|4@0+ (1,0) [0|65535] "" XXX
- SG_ NEW_SIGNAL_1 : 32|8@1+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_2 : 40|4@1+ (1,0) [0|255] "" XXX
+ SG_ GAS_pedal : 19|12@0+ (0.0244140625,0) [0|4096] "percent" XXX
+ SG_ NEW_SIGNAL_1 : 32|8@1+ (1,0) [0|65535] "" XXX
 
 BO_ 421 NEW_MSG_2: 8 XXX
  SG_ COUNTER : 7|4@0+ (1,0) [0|15] "" XXX
@@ -63,17 +63,17 @@ BO_ 352 NEW_MSG_5: 8 XXX
  SG_ NEW_SIGNAL_1 : 15|16@0- (1,0) [0|255] "" XXX
 
 BO_ 505 ENG_RPM: 8 XXX
- SG_ RPM : 23|16@0+ (0.2,0) [0|65535] "" XXX
+ SG_ RPM : 23|16@0+ (0.1,0) [0|65535] "rpm" XXX
 
 BO_ 640 SPEED: 8 XXX
  SG_ SPEED : 39|16@0+ (0.01,0) [0|65535] "" XXX
 
 BO_ 852 SPEED_BREAK: 8 XXX
  SG_ BREAK_LIGHT : 52|1@0+ (1,0) [0|3] "" XXX
- SG_ SPEED_MPH : 7|16@0+ (0.0066,0) [0|65535] "mph" XXX
+ SG_ SPEED_KPH : 7|16@0+ (0.01,0) [0|65535] "kph" XXX
 
 BO_ 853 SPEED2: 8 XXX
- SG_ SPEED : 7|16@0+ (0.0066,0) [0|65535] "mph" XXX
+ SG_ SPEED_MPH : 7|16@0+ (0.00621371,0) [0|65535] "mph" XXX
 
 BO_ 861 WIPERS: 8 XXX
  SG_ WIPER_USE : 23|4@0+ (1,0) [0|15] "" XXX
@@ -115,5 +115,6 @@ BO_ 672 STEERING_MODULE: 8 XXX
 
 
 
+CM_ SG_ 374 GAS_pedal "% of presee";
 CM_ SG_ 640 SPEED "kmh";
 CM_ SG_ 1057 DRIVE_GEAR "possible gear selection";
